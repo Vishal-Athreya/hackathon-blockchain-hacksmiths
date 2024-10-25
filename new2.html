@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fake Identification System using QR code and aesthetic technical design">
+    <title>Fake QR Identification System</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1f36;
+            color: white;
+            line-height: 1.6;
+            background: url('https://source.unsplash.com/1600x900/?technology,security') no-repeat center center/cover;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5em 3em;
+            background-color: rgba(0, 0, 51, 0.9);
+            color: white;
+            border-bottom: 4px solid #f39c12;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Main Section */
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            padding: 2em;
+        }
+
+        .form-container {
+            background: linear-gradient(145deg, rgba(255, 215, 0, 0.9), rgba(0, 51, 102, 0.9));
+            padding: 2.5em;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            margin-bottom: 1.5em;
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #f5f5f5;
+            display: block;
+            margin: 1em 0 0.5em;
+        }
+
+        input[type="file"], input[type="submit"] {
+            width: 100%;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 10px;
+            border: none;
+            background-color: #003366;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f39c12;
+        }
+
+        /* Designer Box for QR Scanning Section */
+        .designer-box {
+            background-color: #fff;
+            color: #333;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        .designer-box img {
+            width: 150px;
+            margin-bottom: 1em;
+        }
+
+        .designer-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .designer-box p {
+            font-size: 1.2em;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 51, 102, 0.9);
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 2em;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1em;
+            }
+
+            nav ul li {
+                margin: 1em 0;
+            }
+
+            .form-container {
+                padding: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">SecureID Verify</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#verify">Verify ID</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section for QR Code Upload -->
+    <section class="main" id="verify">
+        <div class="form-container">
+            <h2>Upload and Verify QR Code</h2>
+            <form>
+                <label for="qr-code">Select QR Code:</label>
+                <input type="file" id="qr-code" name="qr-code" accept="image/*" required>
+                <input type="submit" value="Verify">
+            </form>
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>QR Code Generator</h1>
+    <input type="text" id="text" placeholder="Enter text for QR code" />
+    <button onclick="generateQRCode()">Generate QR Code</button>
+    <div id="qrcode"></div>
+  </div>
+  <!-- Include QRCode library using CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    function generateQRCode() {
+      const qrcodeContainer = document.getElementById('qrcode');
+      const text = document.getElementById('text').value;
+      // Clear previous QR code
+      qrcodeContainer.innerHTML = '';
+      // Generate new QR code
+      if (text) {
+        new QRCode(qrcodeContainer, {
+          text: text,
+          width: 200,
+          height: 200,
+        });
+      } else {
+        alert('Please enter some text to generate a QR code.');
+      }
+    }
+  </script>
+</body>
+</html>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SecureID Verify. All rights reserved.</p>
+        <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a>
+    </footer>
+
+</body>
+</html>
