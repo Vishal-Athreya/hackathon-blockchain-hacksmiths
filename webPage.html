@@ -198,18 +198,6 @@
             }
         }
 
-        // Display all available product IDs
-        function displayAllProducts() {
-            const productList = document.getElementById('productList');
-            productList.innerHTML = '';
-            realProducts.forEach(productId => {
-                const li = document.createElement('li');
-                li.textContent = productId;
-                productList.appendChild(li);
-            });
-        }
-        displayAllProducts();
-
         // Blockchain System
         class Block {
             constructor(index, previousHash, timestamp, data, productId) {
